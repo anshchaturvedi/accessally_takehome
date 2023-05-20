@@ -1,7 +1,7 @@
 import os
 
 
-def blood_distribution(blood_units: dict[str: int], patients: dict[str: int]) -> int:
+def blood_distribution(blood_units: dict[str:int], patients: dict[str:int]) -> int:
     # the idea is to assign from most restrictive to least restrictive
     # so, first assign O-, then O+, then A-, then A+, etc.
 
@@ -29,7 +29,7 @@ def blood_distribution(blood_units: dict[str: int], patients: dict[str: int]) ->
                     blood_units[other_blood_group] -= diff
                     patients[blood_type] -= diff
 
-    return max_blood_recipients 
+    return max_blood_recipients
 
 
 def allowed_blood_groups(blood_group):
